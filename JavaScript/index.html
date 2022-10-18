@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 1</title>
+    <script>
+        //comentario
+        /*más de una
+        línea de comentario*/
+        console.log("hola mundo!!");
+        console.log("que tal");
+        console.log("ya tengo hambre");
+        //; -> terminar instrucción
+        var nombre = "Brisa";
+        var apellido = "Sandoval";
+        var edad = 19;
+        var direccion = "Moisés 7346";
+        console.log(typeof nombre);
+        console.log(typeof null);
+        /*NO HACER  
+        var aDsF -> no, es muy peligroso
+        var la casa-> no agregar espacio
+        var la(casa)-> no colocar en parentesis
+        el nombre de la variable DEBE SER SIGNIFICATIVO*/
+        console.log("**********");
+        console.log("*", nombre, "*");
+        console.log("*", apellido, "*");
+        console.log("*", edad, "*");
+        console.log("**********");
+        //operatoria de variables
+        var num_1 = 24;
+        var num_2 = 35;
+        var num_3 = 11;
+        //no estan especificados, no hay contexto
+        var total_suma = num_1 + num_2 + num_3;
+        //var total super generica
+        var total_resta = num_1 - num_2 - num_3;
+        console.log(total_suma);
+        console.log(total_resta)
+        //sobreescribir la variable
+        var edadd = 28; //creando y asignando
+        edadd = 29; //sobreescribiendo o reemplazando
+        console.log(edadd)
+        //se muestra el valor final 29
+        //probando, no se que haya malo
+        console.log("hola mundo")
+        var numero = 2;
+        numero = numero + 3; //numero va a ser igual a 2+3
+        //numero = 5
+        console.log(numero);
+        numero += 4; //numero = 5+4
+        console.log("el numero es",numero);
+        numero =+4;
+        console.log("muerte",numero); //el numero es 4
+        console.log("*********");
+        console.log("operatoria basica");
+        var numb1 = 8765;
+        var numb2 = 1234;
+        var numb3 = 0;
+        var total_suma = numb1 + numb2 + numb3;
+        var total_resta = numb1 - numb2 -numb3;
+        var total_multiplicacion = numb1 * numb2 * numb3;
+        var total_division = numb1 / numb2 / numb3;
+        console.log("suma" , total_suma);
+        console.log("resta" , total_resta);
+        console.log("multiplicacion" , total_multiplicacion);
+        console.log("division" , total_division);
+        console.log("⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀")
+        console.log("⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀")
+        console.log("  ⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆")
+        console.log("⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿")
+        console.log("⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀")
+        console.log("⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀")
+        console.log("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉")
+        console.log("*********")
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

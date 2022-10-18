@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <script>
+        //bucle FOR
+        //var->global, inicio y final del codigo
+        //let->es fija en la funcion, fuera de ella no existe
+        //i->indice, valor para trabajar con arreglos
+        var i = 2;
+        for(let i = 0; i < 10; i++){
+            console.log("el valor de i es",i);
+        }
+        console.clear();
+        var numeros_pares=[2,4,6,8,10];
+        numeros_pares[0];
+        console.log("el arreglo es",numeros_pares);
+        /*
+        numeros_pares [numeros_pares.length-1];
+        numeros_pares [5-1];
+        numeros_pares[4];
+        */
+        for (let i = 0; i < numeros_pares.length; i++) {
+            console.log("la posicion es",i);
+            console.log("el elemento es",numeros_pares[i]);
+            console.log("");
+        }
+        //var->para la creacion de variales globales
+        //let->solo para bloques especificos
+        /*const->bloques especificos, pero se recomienda 
+        para establecer variables constantes*/
+        var suma_pares=0;
+        for(let i=0; i < numeros_pares.length;i++){
+            suma_pares = suma_pares + numeros_pares [i];
+        }
+        /*suma_pares = 0 + numeros_pares[0]
+        suma_pares = 0 + 2
+        suma_pares = 2
+        suma_pares = 2 + numeros_pares[1]
+        suma_pares = 2 + 4
+        suma_pares = 6
+        */
+        console.log("suma total",suma_pares);
+    </script>
+</body>
+</html>

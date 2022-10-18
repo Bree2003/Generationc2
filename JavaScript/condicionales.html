@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        //condicionales
+        /*la sentencia if
+        validar o comprobar algo para tomar alguna decision
+        if(condicion){}
+        si la condicion es VERDADERA ingresara al if
+        condicion==true*/
+        var edad = parseInt(prompt("Ingresa tu edad",0));
+        //parseInt->convierte string a numero
+        if(edad >= 18){
+            console.log("Es mayor de edad")} //falso
+        if(edad < 18){console.log("Es menor de edad")};
+        //else
+        if(edad >= 18){
+            console.log("Es mayor de edad");}
+            else{
+                console.log("Es menor de edad"); }
+        //alternativa
+        if(edad < 18){
+            console.log("Es menor de edad");}
+            else{
+                console.log("Es mayor de edad"); }
+        /*validar numero es mayor a 10 y menor a 20*/
+        var numero = parseInt(prompt("Ingresa un numero"),0);
+        //conectores && (y) -> es inclusivo || (o)
+        //como buena practica son MAXIMO 6 condiciones
+        //numero puede ser menor a 10
+        //numero puede ser mayor a 10
+        //numero puede ser menor a 20
+        //numero puede ser mayor a 20
+        //numero puede ser igual a 10
+        //numero puede ser igual a 20
+        if(numero > 10 && numero < 20){
+            console.log("El numero esta en el rango solicitado");
+        }else{
+            console.log("No esta dentro del rango solicitado");
+        }
+        //validar si un numero es mayor o menor o igual a cero
+        //=->asignar
+        //==->comparar
+        //!=->distinto
+        console.clear(); //NO SE SUPO QUE HACER
+        var numeroAValidar = parseInt(prompt("ingresa un nuevo numero"));
+        if(numeroAValidar==0){
+            console.log("el numero es igual a cero");
+        }else if(numeroAValidar > 0){
+            console.log("el numero es mayor a cero");
+        }
+        else {
+            console.log("el numero es negativo");
+        }
+        
+    </script>
+</body>
+</html>
