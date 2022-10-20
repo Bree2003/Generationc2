@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion JavaScript</title>
+</head>
+<body>
+    <script>
+
+        //ingresar dias y precios(INCOMPLETO)
+        console.log("Dia y lo que se compro");
+        function dias (dias)
+        {
+            var dia = [];
+            var compra = [];
+            for(let i = 0;i <= 7;i++)
+            {
+                
+            }
+            dia.push(i);
+        }
+        var dia_ingresado = prompt("Dia");
+        var mi_dia = dias(dia_ingresado);
+        console.log(mi_dia);
+
+
+        //20% descuento
+        
+
+        //maximo y minimo (COMPLETADO)
+        console.log("Precios minimo y maximo");
+        var precios = [200,5500,900,7000,500,300];
+        var minimo = 7000;
+        var maximo = 0;
+        for(let i = 0;i < precios.length;i++)
+        {
+            if (precios[i] < minimo)
+            {
+                minimo = precios[i];
+            }
+            if (precios[i] > maximo)
+            {
+                maximo = precios[i];
+            }
+        }
+        console.log("precio maximo",maximo);
+        console.log("precio minimo",minimo);
+    </script>
+</body>
+</html>
