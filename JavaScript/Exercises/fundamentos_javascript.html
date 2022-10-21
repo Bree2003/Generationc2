@@ -8,17 +8,21 @@
 </head>
 <body>
     <h1>Fundamentos JavaScript</h1>
+    <h4>jonmircha</h4>
     <script>
-       let alerta = alert("Esto es una alerta"); //undefined
-        confirmacion = confirm("Esto es una confirmacion"); // true or false
-        aviso = prompt("Esto es un aviso y le permite al usuario ingresar una palabra"); //string or null
-        aviso_numero = parseInt(prompt("Esto es un aviso e ingresa valor numerico")); //number or NaN
+       //let alerta = alert("Esto es una alerta"); //undefined
+        //confirmacion = confirm("Esto es una confirmacion"); // true or false
+        //aviso = prompt("Esto es un aviso y le permite al usuario ingresar una palabra"); //string or null
+       // aviso_numero = parseInt(prompt("Esto es un aviso e ingresa valor numerico")); //number or NaN
 
-        console.log(alerta);
-        console.log(confirmacion);
-        console.log(aviso);
-        console.log(aviso_numero);
+       // console.log(alerta);
+        //console.log(confirmacion);
+       //console.log(aviso);
+        //console.log(aviso_numero);
 
+
+
+        //VARIABLES VAR VS LET
 
         var hola = "Hola Mundo"; //aparece en todo el codigo
         let hello = "Hello World"; //solo aparece en el bloque de fuera , no se muestra en console.log(window)
@@ -69,6 +73,93 @@
         console.log(colores);
 
         //const->se pueden agregar elementos a objetos y arrey
+        console.clear();
+
+
+
+        //CADENAS DE TEXTO STRING
+
+        let lorem = "    mañana se vienen cosas buenas, por las cosas buenas que hiciste ayer       ";
+        let nombre = "jon";
+            apellido = "Mircha";
+            saludo = "hola Mundo";
+        console.log(nombre,apellido,saludo);
+        console.log(nombre.length, //3
+        apellido.length, //6
+        saludo.length,  //10
+        nombre.toUpperCase(), // JON
+        apellido.toLowerCase(),  //mircha
+        lorem.includes("buenas"),
+        lorem,
+        lorem.trim(),
+        lorem.split(" "),//se separan segun espacio
+        lorem.split(",") //se separan segun ,
+        );
+        //length->tamaño de los caracteres
+        //upper->mayuscula
+        //lower->minuscula
+        //includes->busca si esta contenida, true or false
+        //trim->quita espacios al inicio y final del string
+        //split-> se sube a un arreglo
+
+        let saludar = "Hola, mi nombre es" + nombre + " " +  apellido;
+        //concatenacion->suma de string
+        console.log(saludar);
+        //interpolacion de variables
+
+
+
+
+        //TEMPLATE STRING ´ ´
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`;
+        console.log(saludo2);
+
+        let ul = "<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+        //se imprime todo, incluso el mayor y el menor
+        console.log(ul);
+
+        let ul2 = `
+        <ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>`;
+        //imprime tal cual aqui
+        console.log(ul2);
+
+        let ul3 = "<ul>";
+            ul3 += "<li>Primavera</li>";
+            ul3 += "<li>Verano</li>";
+            ul3 += "<li>Otoño</li>";
+            ul3 += "<li>Invierno</li>";
+            ul3 += "</ul>";
+
+        console.log(ul3);
+        //imprime todo junto como la primera ul
+        
+        console.clear();
+
+
+        //NUMEROS NUMBERS
+
+        let a = 2;
+            b = 1;
+            c = 7.19;
+            d = "5.6";
+        console.log(a,b);
+        console.log(c);
+        console.log(parseInt(c)); //imprime solo parte entera, convierte texto a numero
+        console.log(typeof(c)); //typeof te dice que es
+        console.log(a + b); //te los suma
+        console.log(c + d); // numero mas texto es igual a texto, los concatena
+        console.log(c + parseInt(d)); //solo sumo parte entera y agrego decimales
+        console.log(c + parseFloat(d)); //sumo bien la suma
+
+
+        //UNDEFINED, NULL & NaN
+
+        
         </script>
 </body>
 </html>
