@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+       let alerta = alert("Esto es una alerta"); //undefined
+        confirmacion = confirm("Esto es una confirmacion"); // true or false
+        aviso = prompt("Esto es un aviso y le permite al usuario ingresar una palabra"); //string or null
+        aviso_numero = parseInt(prompt("Esto es un aviso e ingresa valor numerico")); //number or NaN
+
+        console.log(alerta);
+        console.log(confirmacion);
+        console.log(aviso);
+        console.log(aviso_numero);
+
+
+        var hola = "Hola Mundo"; //aparece en todo el codigo
+        let hello = "Hello World"; //solo aparece en el bloque de fuera , no se muestra en console.log(window)
+        console.log(hola);
+        console.log(window);
+        console.log(window.hola); //se imprime la variable hpla
+        console.log(window.hello); //undefined
+
+        var musica = "Rock";
+        console.log("antes del bloque",musica); //imprime rock
+
+        {
+            musica = "Pop";
+            console.log("dentro del bloque",musica); //imprime pop
+        }
+
+        console.log("despues del bloque",musica); //imprime pop, no vuelve a ser rock
+        
+        let music = "Rock";
+        console.log(music); //imprime rock
+
+        {
+            music = "Pop";
+            console.log(music); //imprime pop
+        }
+
+        console.log(music); //imprime pop? que raro
+
+        //var->variables globales
+        //let->variables de bloque
+        //const->variable de bloque y no cambiable
+
+        let objeto = 
+        {
+            nombre:"brisa",
+            edad:19
+        }
+
+        let colores = ["blanco", "negro","azul"];
+
+        console.log(objeto);
+        console.log(colores);
+
+        objeto.correo = "breeale2003@gmail.com"; //agrega elementos al objeto
+        colores.push("anaranjado"); //agrega elementos al array
+
+        console.log(objeto);
+        console.log(colores);
+
+        //const->se pueden agregar elementos a objetos y arrey
+        </script>
+</body>
+</html>
