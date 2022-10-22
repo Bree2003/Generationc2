@@ -20,82 +20,133 @@
         
         console.log("********** Ejercicio 1 **********");
 
-        var numeros = [];
-        for(let i = 1;i <= 255;i++)
+        //array numeros 1 al 255
+
+        var numero = []; //array->te permite almacenar varios valores dentro de una sola referencia, Llama a cada miembro del array así: numero[0], numero[1]
+        
+        for(let i = 1;i <= 255; i++) //Crea un bucle hasta que se cumpla la condicion
+        //i = 0, los numeros empiezan desde cero, i++->aumenta en uno
         {
-            numeros.push(i);
+            numero.push(i); //push hace que los valores entren al arreglo
         }
-        console.log(numeros);
+        console.log(numero);
+        
+
+
 
         console.log("********** Ejercicio 2 **********");
 
-        var numeros_pares = [];
+        //suma pares hasta 1000
+
+        var numero_par = [];
         var suma_pares = 0;
-        for(let i = 1;i <= 500;i++)
+
+        for(let i = 1;i <= 500;i++) //500->por que son la mitad *indica que se trabajan con numeros*
         {
-            numeros_pares.push(i*2); 
+            numero_par.push(i*2); //como i=1 empieza desde el 2 ya que 1*2=2
+            //suma_pares = suma_pares + numero_par[i]; //da NaN porque se estaria repitiendo el push y la suma cada vez que se repita en vez de solo subir los valores
         }
-        for(let i = 0;i < numeros_pares.length;i++)
+        console.log(numero_par);
+
+        for(let i = 0;i < numero_par.length;i++)
         {
-            suma_pares = suma_pares + numeros_pares[i];
+            suma_pares = suma_pares + numero_par[i];
         }
-        console.log(numeros_pares);
-        console.log(suma_pares);
+        console.log("La suma de los numeros pares hasta 1000 es",suma_pares);
+
+
+
 
         console.log("********** Ejercicio 3 **********");
 
-        var numeros_impares = [];
+        //suma impares hasta 5000
+
+        var numero_impar = [];
         var suma_impares = 0;
+
+       //for(let i = 1; i < 2500;i++)
+       // {
+       //     numero_impar.push((i*2)+1); //como i=1 empieza desde el 3 ya que (1*2)+1=3
+       // }
+
         for(let i = 0;i < 2500;i++)
         {
-            numeros_impares.push((i*2)+1);
-            suma_impares = suma_impares + numeros_impares[i];
+            numero_impar.push((i*2)+1); //con i=0 empieza desde el 1
         }
-        console.log(numeros_impares);
-        console.log(suma_impares);
+        console.log(numero_impar);
+
+        for(let i = 0;i < numero_impar.length;i++)
+        {
+            suma_impares = suma_impares + numero_impar[i];
+        }
+        console.log("La suma de los numeros impares hasta 5000 es",suma_impares);
+
+
+
 
         console.log("********** Ejercicio 4 **********");
 
-        var estos_numeros = [2,4,17,23,50];
-        var suma_estos_numeros = 0;
-        for(let i = 0;i < estos_numeros.length;i++)
+        //sumar valores dentro de un array
+
+        array = [3,4,1,5,10,-15];
+        suma_array = 0;
+
+        for(let i = 0;i < array.length;i++) //length->cantidad de elementos, se trabaja con los elementos dentro del array
         {
-            suma_estos_numeros = suma_estos_numeros + estos_numeros[i];
+            suma_array = suma_array + array[i];
         }
-        console.log(suma_estos_numeros);
+        console.log(array);
+        console.log("La suma del array es",suma_array);
+
+
+
 
         console.log("********** Ejercicio 5 **********");
 
-        var varios_numeros = [3,1,5,7,10,64,32];
-        var maximo_numero = 0;
-        for(let i = 0;i < varios_numeros.length;i++)
+        //encuentra el mayor (max) de un array
+
+        array_max = 0; //trabajaremos con el array del ejercicio 4
+
+        for(let i = 0;i < array.length;i++)
         {
-            if(varios_numeros[i] > maximo_numero)
+            if(array[i] > array_max)
             {
-                maximo_numero = varios_numeros[i];
+                array_max = array[i];
             }
         }
-        console.log(maximo_numero);
+        console.log("El mayor numero del array es",array_max);
+
+
+
 
         console.log("********** Ejercicio 6 **********");
 
-        var otros_numeros = [5,4,7,6,2,3,7,4];
-        var suma_numero = 0;
-        for(let i = 0;i < otros_numeros.length;i++)
+        //da el promedio de un array
+
+        array_suma = 0; //trabajaremos con el array del ejercicio 4
+
+        for(let i = 0;i < array.length;i++)
         {
-            suma_numero = suma_numero + otros_numeros[i]; 
+            array_suma = array_suma + array[i];
         }
-        var promedio_suma = suma_numero / otros_numeros.length;
-        console.log(promedio_suma);
+        array_prom = array_suma / array.length;
+        console.log("El promedio del array es",array_prom);
+
+
+
 
         console.log("********** Ejercicio 7 **********");
 
-        var otros_numeros_impares = [];
+        //array impares del 1 hasta el 50
+
+        array_impares = [];
+
         for(let i = 0;i < 25;i++)
         {
-            otros_numeros_impares.push((i*2)+1);
+            array_impares.push((i*2)+1);
         }
-        console.log(otros_numeros_impares);
+        console.log(array_impares);
+
     </script>
 </body>
 </html>
