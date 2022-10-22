@@ -25,10 +25,18 @@
             var correo = prompt("Escribe tu correo","Correo");
             var direccion = prompt("Escribe tu direccion","Direccion");
             var numero = parseInt(prompt("Escribe tu numero",569)); //no pueden ir numero y texto en uno
+
+        document.write("Buenos dias"," ",nombre," ",apellido,"<br>"); //con document write hay que colocar el br entre comillas
+        document.write("Tu edad es"," ",edad,"<br>"); //o sino te dice que hay un error
+        document.write("Tu correo es"," ",correo,"<br>");
+        document.write("Tu direccion es"," ",direccion,"<br>");
+        document.write("Tu numero es"," ",numero,"<br>");
+
         }
         else
         {
             alert("Acceso denegado, tienes que ser mayor de edad");
+            document.write("Lo sentimos, acceso denegado");
         }
         
         console.log("Buenos dias",nombre,apellido);
@@ -43,14 +51,6 @@
         //document.write("Tu correo es",correo);          //las comas no separan y escriben todo junto y en una sola linea
         //document.write("Tu direccion es",direccion);
         //document.write("Tu numero es",numero);
-
-        document.write("Buenos dias"," ",nombre," ",apellido,"<br>"); //con document write hay que colocar el br entre comillas
-        document.write("Tu edad es"," ",edad,"<br>"); //o sino te dice que hay un error
-        document.write("Tu correo es"," ",correo,"<br>");
-        document.write("Tu direccion es"," ",direccion,"<br>");
-        document.write("Tu numero es"," ",numero,"<br>");
-
-
 
     </script>    
 </body>
