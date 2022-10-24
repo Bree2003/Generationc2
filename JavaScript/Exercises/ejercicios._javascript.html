@@ -9,28 +9,53 @@
 <body>
     <script>
 
-        /*## Operaciones básicas, Tipos de datos, Prompt y Alert
-        - Escribir un programa que muestre un prompt donde el usuario ingresa un número, luego 
+        console.log("********** Primera Parte **********");
+
+        console.log("OPERACIONES BASICAS, TIPOS DE DATOS, PROMPT Y ALERT");
+
+        console.log("***** Ejercicio 1 *****");
+        /* Escribir un programa que muestre un prompt donde el usuario ingresa un número, luego 
         muestra otro prompt pidiendo otro número, finalmente el programa muestra una alerta con 
-        el resultado de la suma.
-        - Crear un programa donde el usuario ingrese en un prompt la temperatura en Celcius y el 
-        programa muestre en una alerta la temperatura en Fahrenheit.
-        - Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 
-        10  igual 0.5
-        - Si a = [1,2,3] crear un script que determine de muestre un alert del tipo de dato de a.
-        ## If and else
-        - Crear un programa que determine si un número introducido en un Prompt es par o no, la 
-        respuesta será mostrada en una alerta.
-        - Crear un programa que determine si un número introducido en un Prompt es divisible por 5
-        o no, mostrar el resultado con console.log
-        - Crear un programa que determine si un número introducido en un popup es divisible por 
-        11 y 5 o no, mostrar el resultado con console.log
-        - Crear un programa  que le pida al usuario dos números en un Prompt y luego muestre en 
-        un alerta el número mayor.
-        - Crear un programa que le pida al usuario primero un  números al usuario a través de un 
+        el resultado de la suma.*/
+
+        console.log("***** Ejercicio 2 *****");
+        /*Crear un programa donde el usuario ingrese en un prompt la temperatura en Celcius y el 
+        programa muestre en una alerta la temperatura en Fahrenheit.*/
+
+        console.log("***** Ejercicio 3 *****");
+        /*Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 
+        10  igual 0.5*/
+
+        console.log("***** Ejercicio 4 *****");
+        /*Si a = [1,2,3] crear un script que determine de muestre un alert del tipo de dato de a.*/
+
+        console.log("********** Segunda Parte **********");
+
+        console.log("IF AND ELSE");
+
+        console.log("***** Ejercicio 1 *****");
+        /*Crear un programa que determine si un número introducido en un Prompt es par o no, la 
+        respuesta será mostrada en una alerta.*/
+
+        console.log("***** Ejercicio 2 *****");
+        /*Crear un programa que determine si un número introducido en un Prompt es divisible por 5
+        o no, mostrar el resultado con console.log*/
+
+        console.log("***** Ejercicio 3 *****");
+        /*Crear un programa que determine si un número introducido en un popup es divisible por 
+        11 y 5 o no, mostrar el resultado con console.log*/
+
+        console.log("***** Ejercicio 4 *****");
+        /*Crear un programa  que le pida al usuario dos números en un Prompt y luego muestre en 
+        un alerta el número mayor.*/
+
+        console.log("***** Ejercicio 5 *****");
+        /*Crear un programa que le pida al usuario primero un  números al usuario a través de un 
         prompt y luego un segundo número para luego mostrar en un alerta el número mayor, esta 
-        vez realizar el ejercicio ocupando un if ternario.
-        - El siguiente código tiene un error, descubrirlo y arreglarlo:
+        vez realizar el ejercicio ocupando un if ternario.*/
+
+        console.log("***** Ejercicio 6 *****");
+        /*El siguiente código tiene un error, descubrirlo y arreglarlo:
         ~~~javascript
         // Obtener edad
         if(edad < 13) {
@@ -40,281 +65,7 @@
         } else{
         console.log("Es adolecente");
         }
-        ~~~
-        ## Loops*/
-
-        /*- Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa el usuario 
-        en un prompt.
-        - Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario 
-        en un prompt.
-        - Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario 
-        en un prompt.
-        - Escribir utilizando console.log la tabla del 9 hasta 9x10.
-        - Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, 
-        validar que el número ingresado no contenga letras.
-        - Realizar la suma de todos los números pares entre N y M donde N y M los ingresa un 
-        usuario.
-        - Realizar la sumatoria de los primeros N números, donde N es ingresado por el usuario.
-        - Realizar el factorial de los primeros N números.
-        - Encontrar todos los divisores de un número.
-        - Determinar si un número ingresado por el usuario en un loop es primo o no, validar que el 
-        número ingresado sea mayor o igual a dos.
-        - Crear un programa que determine si un número es perfecto o no, (se dice que un número 
-        es perfecto si el número es igual a sus divisores, ejemplos 6 = 1 + 2 + 3)
-        - Generar los primeros N números primos, donde n es ingresado por el usuario.
-        - Generar los primeros N números perfectos.
-        ## Funciones
-        - Crear una función que reciba un valor cualquiera y lo muestre ocupando console.log(), 
-        llamar a la función pasando el valor 5
-        - La siguiente función devuelve undefined en lugar de la multiplicación, se pide arreglarla
-
-        ~~~js
-        function multiply(a, b){
-          a * b
-        }*/
-
-        /*- Crear una función que reciba dos valores y devuelva la suma de ellos.
-        - Crear una función que reciba un número entero y muestre un error si el tipo de dato 
-        pasado es de otro tipo.
-        - Crear una función autoejecutable que muestre "muuu" en pantalla
-        ## Array
-        - Dado el array = [1,2,3,4,5,6]
-        - Iterar por todos los elementos dentro de un array utilizando while y mostrarlos en 
-        pantalla.
-        - Iterar por todos los elementos dentro de un array utilizando for y mostrarlos en 
-        pantalla.
-        - Iterar por todos los elementos dentro de un array utilizando .forEach y mostrarlos 
-        en pantalla.
-        - Mostrar todos los elementos dentro de un array sumándole uno a cada uno.
-        - Generar una copia de un array pero con todos los elementos incrementado en 1.
-        - Calcular el promedio
-        - Crear un array vacío, luego generar 20 números al azar y guardarlos en un array.
-        - Crear un array vacío, luego generar N números al azar y guardarlos en un array, N es 
-        introducido por el usuario a través de un prompt.
-        - Dado un array que contiene ["azul", "amarillo", "rojo", "verde", "café", "rosa"] determinar si 
-        un color introducido por el usuario se encuentra dentro del array o no.
-        ## Ordenamiento
-        - Crear una función que reciba un arreglo y que cree uno nuevo con todos los elementos 
-        ordenados de menor a mayor
-        - Crear una función que reciba un arreglo y que cree uno nuevo con todos los elementos 
-        ordenados de mayor a menor.*/
-
-        console.log("********** Primera Parte **********");
-
-        console.log("OPERACIONES BASICAS, TIPOS DE DATOS, PROMPT Y ALERT");
-
-        console.log("***** Ejercicio 1 *****");
-
-        //prompt un numero otro prompt segundo numero y alert de la suma
-
-        var numero1 = parseInt(prompt("Elige un numero",0));
-        var numero2 = parseInt(prompt("Elige otro numero",0));
-        var suma = numero1 + numero2;
-        console.log("Primer numero",numero1);
-        console.log("Segundo numero",numero2);
-        console.log("La suma es",suma);
-        //alert("La suma es",suma); //solo se puede colocar una cosa en alert, por eso no me acepta el string y numero
-        //falso, es por la coma que no me aparece
-        alert("La suma es " + suma);    
-
-
-
-
-        console.log("***** Ejercicio 2 *****");
-
-        //prompt temperatura celcius y alert temperatura fahrenheit
-
-        var temperatura_celcius = parseInt(prompt("Temperatura en celcius",0));
-        var temperatura_fharenheit = (temperatura_celcius * (9 / 5)) + 32;
-        console.log("La temperatura en celcius es",temperatura_celcius);
-        console.log("La temperatura en fahrenheit es",temperatura_fharenheit);
-        alert("Temperatura en fahrenheit " + temperatura_fharenheit);
-
-
-
-
-        console.log("***** Ejercicio 3 *****");
-
-        //prompt numero alert dividido en 10
-
-        var numero_ = parseInt(prompt("Ingrese un numero",0)); //solo ingresa numeros enteros aunque escribas con decimal
-        //var numeross = parseFloat(prompt("float",0)); //parseFloat ingresa numeros con decimales
-        //console.log(numeross);
-        var division = numero_ / 10;
-        console.log("Numero ingresado",numero_);
-        console.log("Numero dividido por 10 es",division);
-        alert("Su numero dividido por 10 es " + division);
-
-
-
-
-        console.log("***** Ejercicio 4 *****");
-
-        //si a=[1,2,3] hacer alert que muestre que tipo de dato es
-
-        var a = [1,2,3];
-        var a_alert = typeof(a);
-        console.log("El array es",a);
-        console.log("El tipo de dato es",a_alert); //como los numeros estan dentro del arreglo se reconoce como object
-        alert("El tipo de dato es " + a_alert);
-
-
-
-
-        console.log("********** Segunda Parte **********");
-
-        console.log("IF AND ELSE");
-
-        console.log("***** Ejercicio 1 *****");
-
-        //prompt numero introducido alert si es par o impar
-
-        var numeross = parseInt(prompt("Ingrese numero",0));
-        //console.log(numeross % 6); //% da el resto de la division si es 23/6->parte entera es 3 y 3*6=18 y 23-18=5 por lo tanto 23%6=5
-        var resto_numeross = numeross % 2;
-        console.log("El numero ingresado es",numeross);
-        if(resto_numeross == 0 )
-        {
-            alert("El numero es par");
-            console.log("El numero es par");
-        }
-        else{
-            alert("El numero es impar");
-            console.log("El numero es impar");
-        }
-
-
-
-
-        console.log("***** Ejercicio 2 *****");
-
-        //numero en un prompt es divisible por 5 o no
-
-        var num = parseInt(prompt("Ingrese un numero",0));
-        var num_resto = num % 5;
-        console.log("EL numero es",num);
-        if(num_resto == 0)
-        {
-            alert("El numero es divisible por 5");
-            console.log("EL numero es divisible por 5");
-        }
-        else
-        {
-            alert("El numero no es divisible por 5");
-            console.log("El numero no es divisible por 5")
-        }
-
-
-
-
-        console.log("***** Ejercicio 3 *****");
-
-        //numero en un popup es divisible por 11 y 5
-        //un popup es alert confirm prompt
-
-        var nume = parseInt(prompt("Ingrese un numero",0));
-        var nume_resto5 = nume % 5;
-        var nume_resto11 = nume % 11;
-        console.log("El numero es",nume);
-        if(nume_resto11 == 0 && nume_resto5 == 0) //&& -> y || -> o
-        {
-            alert("El numero es divisible por 11 y 5");
-            console.log("El numero es divisible por 11 y 5");
-        }
-        else
-        {
-            alert("El numero no es divisible por 11 y 5");
-            console.log("El numero no es divisible por 11 y 5");
-        }
-
-
-
-
-        console.log("***** Ejercicio 4 *****");
-
-        //dos numeros en un prompt y un alert con el numero mayor
-
-        //var prompt = prompt(prompt("prompt",0),0); //solo se anoto el segundo prompt en console.log y el primer prompt se convierte en el texto del segundo
-        //console.log("prompt",prompt);
-
-        var num1 = parseInt(prompt("Ingrese un numero",0));
-        var num2 = parseInt(prompt("Ingrese sengundo numero",0));
-        console.log("Primer numero",num1);
-        console.log("Segundo numero",num2);
-        if(num1 > num2)
-        {
-            alert("El numero mayor es " + num1);
-            console.log("El numero mayor es",num1);
-        }
-        else
-        {
-            alert("El numero mayor es " + num2);
-            console.log("El numero mayor es",num2);
-        }
-
-
-
-
-        console.log("***** Ejercicio 5 *****");
-
-        //dos numeros prompt y una alerta con el mayor usando if ternario
-        //() ? true(condicion) : false(condicion) -> if ternario
-
-        var numb1 = parseInt(prompt("Ingresa un numero",0));
-        var numb2 = parseInt(prompt("Ingresa otro numero",0));
-        var numb_mayor = (numb1 > numb2) ? ("El mayor es " + numb1) : ("El mayor es " + numb2);
-        alert(numb_mayor);
-        console.log("Primer numero",numb1);
-        console.log("Segundo numero",numb2);
-        console.log(numb_mayor);
-
-
-
-
-        console.log("***** Ejercicio 6 *****");
-
-        //descubrir error en el codigo
-        // Obtener edad
-        /*
-        if(edad < 13) 
-        {
-        console.log("Es niño");
-        }
-        if(edad < 18 )
-        {
-        console.log("Es adolecente");
-        } 
-        else
-        {
-        console.log("Es adolecente");
-        }
-        */
-
-        var edad = parseInt(prompt("Escribe tu edad", 0));
-        if(edad < 13)
-        {
-            console.log("Tu edad es",edad);
-            console.log("Es un niño");
-            alert("Es un niño");
-        }
-        else
-        {
-            if(edad > 18)
-            {
-                console.log("Tu edad es",edad);
-                console.log("Es un adulto");
-                alert("Es un adulto");
-            }
-            else
-            {
-                console.log("Tu edad es",edad);
-                console.log("Es un adolescente");
-                alert("Es un adolescente");
-            }
-        }
-
-
-
+        ~~~*/
 
         console.log("********** Tercera Parte **********");
 
@@ -324,153 +75,131 @@
         //while(condicion)->se repite hasta que no se cumpla la condicion especificada
 
         console.log("***** Ejercicio 1 *****");
-
-        //mostrar un array de numeros aumentados de uno en uno hasta el numero ingresado por el usuario
-
-        var numbe = parseInt(prompt("Ingresa un numero",0));
-        var array2 = [];
-        for(let i = 1;i <= numbe;i++)
-        {
-             array2.push(i); //push->parentesis operatoria->corchetes
-        }
-        console.log("El numero es",numbe);
-        console.log(array2);
-
-
-
+        /* Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa el usuario 
+        en un prompt.*/
 
         console.log("***** Ejercicio 2 *****");
-
-        //mostrar un array de numeros aumentados de dos en dos hasta el numero ingresado por el usuario
-
-        var number = parseInt(prompt("Ingresa un numero",0));
-        var number_partido = parseInt(number/2);
-        var array3 = [];
-        for(let i = 1;i <= number_partido;i++)
-        {
-            array3.push(i*2); //push->parentesis operatoria->corchetes operatoria tipo array = array + sumaarray[i]
-        }
-        console.log("El numero es",number);
-        console.log(array3);
-
-        
-
+        /*Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario 
+        en un prompt.*/
 
         console.log("***** Ejercicio 3 *****");
-
-        //mostrar array de numeros disminuidos de uno en uno partiendo del numero ingresado por el usuario
-
-        var numerr = parseInt(prompt("Ingrese un numero",0));
-        var array4 = [];
-        for(let i = numerr;i >= 1;i--)
-        {
-            array4.push(i);
-        }
-        console.log("Numero ingresado",numerr);
-        console.log(array4);
-
-
-
+        /*Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario 
+        en un prompt.*/
 
         console.log("***** Ejercicio 4 *****");
+        /*Escribir utilizando console.log la tabla del 9 hasta 9x10.*/
         
-        //escribir tabla del 9 hasta 9*10
-
-        var tabla = [];
-        for(let i = 1;i <= 10;i++)
-        {
-            tabla.push(i*9);
-        }
-        //console.log("9*1=",tabla[0],"<br>",
-        //"9*2=",tabla[1],"<br>",
-        //"9*3=",tabla[2],"<br>",
-        //"9*4=",tabla[3],"<br>",
-        //"9*5=",tabla[4],"<br>",      //se imprime con el <br>, no salta lineas
-        //"9*6=",tabla[5],"<br>",
-        //"9*7=",tabla[6],"<br>",
-        //"9*8=",tabla[7],"<br>",
-        //"9*9=",tabla[8],"<br>",
-        //"9*10=",tabla[9],"<br>");
-        console.log("9*1=",tabla[0],
-        "\n9*2=",tabla[1],
-        "\n9*3=",tabla[2],
-        "\n9*4=",tabla[3],
-        "\n9*5=",tabla[4], 
-        "\n9*6=",tabla[5],
-        "\n9*7=",tabla[6],
-        "\n9*8=",tabla[7],
-        "\n9*9=",tabla[8],
-        "\n9*10=",tabla[9]);
-        //console.log(23,"\n",23); //no se puede solo, tiene que tener algo junto a el
-        //console.log(24,"\narrey"); //solo permite string, no variables
-        
-
-
-
         console.log("***** Ejercicio 5 *****");
-
-        //prompt numero, sumar todos los digitos, validar que no tenga letras
-
-        var member = parseInt(prompt("Ingrese un numero"),0);        
-        var resto_member = 0;
-        var sumass_mber = 0;
-        console.log("El numero es", member);
-        if(member == NaN)
-        {
-            alert("No es un numero");
-            console.log("No es un numero");
-        }
-        else
-        {
-            while(member !== 0) //!== es desigual
-            {
-                var resta_member = member % 10; //resto de la division
-                resto_member = resto_member + resta_member; //se suman los restos
-                member = parseInt(member / 10);  //se reescribe el numero truncando el resultado de la division              
-            }
-            while(resto_member !== 0) //lo mismo que arriba pero con el resto
-            {
-                var d_resto_member = resto_member % 10;
-                sumass_mber = sumass_mber + d_resto_member;
-                resto_member = parseInt(resto_member/10);
-            }
-        }
-        console.log("La suma de sus digitos es",sumass_mber);
-
-
-
+        /*Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, 
+        validar que el número ingresado no contenga letras.*/
 
         console.log("***** Ejercicio 6 *****");
+        /*Realizar la suma de todos los números pares entre N y M donde N y M los ingresa un 
+        usuario.*/
 
-        //realizar la suma de numeros pares entre N y M donde N y M los entrega el usuario
+        console.log("***** Ejercicio 7 *****");
+        /*Realizar la sumatoria de los primeros N números, donde N es ingresado por el usuario.*/
 
-        var n1 = parseInt(prompt("Ingresa un numero",0));
-        var n2 = parseInt(prompt("Ingrese otro numero",0));
-        var array_n1n2 = [];//colocaremos los numeros pares de n1 a n2
-        var array_n2n1 = [];
-        var n1_2 = parseInt(n1 / 2); //como pares se multiplica por 2, primero dividimos para hacer la operatoria
-        var n2_2 = parseInt(n2 / 2);
-        var n1n2 = parseInt((n1 - n2) / 2); //hasta que numero se aumenta, lo mismo que arriba
-        var n2n1 = parseInt((n2 - n1) / 2);
-        console.log("Primer numero",n1);
-        console.log("Segundo numero",n2);
-        if(n1 > n2) //primero definiremos numeros pares
-        {
-            for(let i = n2_2;i <= n1n2;i++)
-            {
-                array_n2n1.push(i*2);
-            }
-            console.log(array_n2n1);
-        }
-        else
-        {
-            for(let i = n1_2;i <= n2n1;i++)
-            {
-                array_n1n2.push(i*2);
-            }
-            console.log(array_n1n2);
-        }
-        
+        console.log("***** Ejercicio 8 *****");
+        //Realizar el factorial de los primeros N números.
+
+        console.log("***** Ejercicio 9 *****");
+        //Encontrar todos los divisores de un número.
+
+        console.log("***** Ejercicio 10 *****");
+        /*Determinar si un número ingresado por el usuario en un loop es primo o no, validar que el 
+        número ingresado sea mayor o igual a dos.*/
+
+        console.log("***** Ejercicio 11 *****");
+        /*Crear un programa que determine si un número es perfecto o no, (se dice que un número 
+        es perfecto si el número es igual a sus divisores, ejemplos 6 = 1 + 2 + 3)*/
+
+        console.log("***** Ejercicio 12 *****");
+        /*Generar los primeros N números primos, donde n es ingresado por el usuario.*/
+
+        console.log("***** Ejercicio 13 *****");
+        //Generar los primeros N números perfectos.
+
+        console.log("********** Cuarta Parte **********");
+
+        console.log("FUNCTION");
+
+        console.log("***** Ejercicio 1 *****");
+        /*Crear una función que reciba un valor cualquiera y lo muestre ocupando console.log(), 
+        llamar a la función pasando el valor 5*/
+
+        console.log("***** Ejercicio 2 *****");
+        /*La siguiente función devuelve undefined en lugar de la multiplicación, se pide arreglarla
+
+        ~~~js
+        function multiply(a, b){
+          a * b
+        }*/
+
+        console.log("***** Ejercicio 3 *****");
+        /*Crear una función que reciba dos valores y devuelva la suma de ellos.*/
+
+        console.log("***** Ejercicio 4 *****");
+        /*Crear una función que reciba un número entero y muestre un error si el tipo de dato 
+        pasado es de otro tipo.*/
+
+        console.log("***** Ejercicio 5 *****");
+        //Crear una función autoejecutable que muestre "muuu" en pantalla
+
+        console.log("********** Quinta Parte **********");
+
+        console.log("ARRAYS");
+
+        console.log("***** Ejercicio 1 *****");
+        //Dado el array = [1,2,3,4,5,6]
+        /*Iterar por todos los elementos dentro de un array utilizando while y mostrarlos en 
+        pantalla.*/
+
+        console.log("***** Ejercicio 2 *****");
+        //Dado el array = [1,2,3,4,5,6]
+        /*Iterar por todos los elementos dentro de un array utilizando for y mostrarlos en 
+        pantalla.*/
+
+        console.log("***** Ejercicio 3 *****");
+        //Dado el array = [1,2,3,4,5,6]
+        /*Iterar por todos los elementos dentro de un array utilizando .forEach y mostrarlos 
+        en pantalla.*/
+
+        console.log("***** Ejercicio 4 *****");
+        //Dado el array = [1,2,3,4,5,6]
+        /* Mostrar todos los elementos dentro de un array sumándole uno a cada uno.*/
+
+        console.log("***** Ejercicio 5 *****");
+        //Dado el array = [1,2,3,4,5,6]
+        /*Generar una copia de un array pero con todos los elementos incrementado en 1.*/
+
+        console.log("***** Ejercicio 6 *****");
+        //Dado el array = ejercico 5
+        //Calcular el promedio
+
+        console.log("***** Ejercicio 7 *****");
+        /*Crear un array vacío, luego generar 20 números al azar y guardarlos en un array.*/
+
+        console.log("***** Ejercicio 8 *****");
+        /*Crear un array vacío, luego generar N números al azar y guardarlos en un array, N es 
+        introducido por el usuario a través de un prompt.*/
+
+        console.log("***** Ejercicio 9 *****");
+        /*Dado un array que contiene ["azul", "amarillo", "rojo", "verde", "café", "rosa"] determinar si 
+        un color introducido por el usuario se encuentra dentro del array o no.*/
+
+        console.log("********** Sexta Parte **********");
+
+        console.log("ORDENAMIENTO");
+
+        console.log("***** Ejercicio 1 *****");
+        /*Crear una función que reciba un arreglo y que cree uno nuevo con todos los elementos 
+        ordenados de menor a mayor*/
+
+        console.log("***** Ejercicio 2 *****");
+        /*Crear una función que reciba un arreglo y que cree uno nuevo con todos los elementos 
+        ordenados de mayor a menor.*/
+
         </script>
 </body>
 </html>
