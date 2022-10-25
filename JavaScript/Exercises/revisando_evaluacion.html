@@ -8,55 +8,195 @@
 </head>
 <body>
     <script>
-      /*  José es el dueño de un minimarket de barrio, lleva más de 15 años administrando el
-funcionamiento completo de su negocio, siempre lo ha hecho de manera análoga, lo cual en un
-inicio no presentaba problemas, pero con el pasar de los años esto ha generado errores
-humanos, pérdidas de registros, documentos estropeados por la antigüedad y una nula
-posibilidad de poder estudiar el real crecimiento de su negocio año tras año.
-José te contrata para generar un software para su negocio.
-En esta segunda instancia tu tarea será generar funciones utilizando JavaScript
-Funciones solicitadas:
-obs: los días se deben ingresar como tipo String y los valores de los productos a
-comprar se deben trabajar con arreglos, por ejemplo = [1000,500,650,8000]
-● Don José todos los martes y jueves realiza un 20% de descuento en el total de las
-compras, crea una función la cual debe recibir un parámetro del día y el arreglo de
-valores de los productos a comprar, esta debe retornar el total final de la compra según
-corresponda o no descuento.
-● Don José hace un 5% de descuento a los clientes que compran más de 3 productos y al
-menos uno de ellos tiene un valor mayor a 10.000, realiza una función que calcule el
-total verificando si corresponde o no el descuento.
-● Se desea tener una función verificadora encargada de revisar si dentro de el arreglo de
-valores de los productos a comprar no existan valores negativos ingresados por error,
-en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar
-un mensaje de error junto con el número negativo y el índice en el que se encontraba.
-● Dado el siguiente arreglo [200,5500,900,7000,500,300] con los valores de cada
-producto
-○ Crea una función que retorne el valor del producto más costoso.
-○ Crea una función que retorne el valor del producto menos costoso.
-Puntos a evaluar:
-● Creación de funciones.
-● Uso de bucles.
-● Uso de condicionales.
-● Uso de operadores lógicos.
-● Uso de operadores algorítmicos.
-● Definición correcta de variables.
-● Lógica de programación*/
+    /*  José es el dueño de un minimarket de barrio, lleva más de 15 años administrando el
+    funcionamiento completo de su negocio, siempre lo ha hecho de manera análoga, lo cual en un
+    inicio no presentaba problemas, pero con el pasar de los años esto ha generado errores
+    humanos, pérdidas de registros, documentos estropeados por la antigüedad y una nula
+    posibilidad de poder estudiar el real crecimiento de su negocio año tras año.
+    José te contrata para generar un software para su negocio.
+    En esta segunda instancia tu tarea será generar funciones utilizando JavaScript
+    Funciones solicitadas:
+    obs: los días se deben ingresar como tipo String y los valores de los productos a
+    comprar se deben trabajar con arreglos, por ejemplo = [1000,500,650,8000] 
 
-//var digitos = [];//123
-var resultado = 0;
-var digito = prompt("Ingresa un numero mayor de 2 digitos: ",0)
-console.log(digito)
-//digitos = digito //no hizo push para subirlo al arreglo,->el arreglo se convierte en el texto
-console.log(digito.length)
+    Puntos a evaluar:
+    ● Creación de funciones.
+    ● Uso de bucles.
+    ● Uso de condicionales.
+    ● Uso de operadores lógicos.
+    ● Uso de operadores algorítmicos.
+    ● Definición correcta de variables.
+    ● Lógica de programación*/
 
-for(let i = 0;i<digito.length;i++){
+    var dia = "martes";
+    dia = dia.toLowerCase();
+    var ajo = 200;
+    var papas = 5500;
+    var lechuga = 900;
+    var palta = 11000;
+    var tomate = 500;
+    var cebolla = 300;
+    var producto1 = [ajo,papas,lechuga,palta,tomate,cebolla]; //los elementos deben ir antes del arreglo
+    console.log(dia);
+    console.log(producto1);
+    
+    console.log("***** Ejercicio 1 *****");
+    /*Don José todos los martes y jueves realiza un 20% de descuento en el total de las
+    compras, crea una función la cual debe recibir un parámetro del día y el arreglo de
+    valores de los productos a comprar, esta debe retornar el total final de la compra según
+    corresponda o no descuento.*/
 
-    console.log(digito[i])
-    resultado = resultado + parseInt(digito[i])
+    function minimarket(dias,compra)
+    {
+        if(dia == "martes" || dia == "jueves")
+        {
+            var suma_compra = 0;
+            for(let i = 0;i < compra.length;i++)
+            {
+                suma_compra = suma_compra + compra[i];
+            }
+            var total_compra = suma_compra - (suma_compra * 0.2);
+        }
+        else
+        {
+            var suma_compra = 0;
+            for(let i = 0;i < compra.length;i++)
+            {
+                suma_compra = suma_compra + compra[i];
+            }
+            var total_compra = suma_compra;
+        }
+        //return("El dia es",dia); //solo se puede colocar un return en una function
+        return("El total de la compra es",total_compra);
+    }
+    console.log(minimarket(dia,producto1));
 
-}
+    console.log("***** Ejercicio 2 *****");
+    /*Don José hace un 5% de descuento a los clientes que compran más de 3 productos y al
+    menos uno de ellos tiene un valor mayor a 10.000, realiza una función que calcule el
+    total verificando si corresponde o no el descuento.*/
 
-console.log(resultado)
+    var ajo = 200;
+    var papas = 5500;
+    var lechuga = 900
+    var producto2 = [ajo,papas,lechuga];
+
+    function descuento (productos)
+    {
+        var producto_maximo = 0;
+            for(let i = 0;i < productos.length;i++)
+            {
+                if(productos[i] > producto_maximo)
+                {
+                    producto_maximo = productos[i];
+                }
+            }
+
+        if(productos.length > 3 && producto_maximo > 10000)
+        {
+            suma_productos = 0;
+            for(let i = 0; i < productos.length;i++)
+            {
+                suma_productos = suma_productos + productos[i];
+            }
+            var total_producto = suma_productos - (suma_productos * 0.05);
+        }
+        else
+        {
+            suma_productos = 0;
+            for(let i = 0; i < productos.length;i++)
+            {
+                suma_productos = suma_productos + productos[i];
+            }
+            var total_producto = suma_productos;
+        }
+        return(total_producto);
+    }
+    console.log(descuento(producto1));
+
+    console.log("***** Ejercicio 3 *****");
+    /*Se desea tener una función verificadora encargada de revisar si dentro de el arreglo de
+    valores de los productos a comprar no existan valores negativos ingresados por error,
+    en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar
+    un mensaje de error junto con el número negativo y el índice en el que se encontraba.*/
+
+    var ajo = 200;
+    var papas = 5500;
+    var lechuga = -900;
+    var palta = 11000;
+    var producto3 = [ajo,papas,lechuga,palta];
+
+    function verificadora(grupo_productos)
+    {
+        var producto_minimo = 0;
+        var indice_minimo = 0;
+            for(let i = 0;i < grupo_productos.length;i++)
+            {
+                if(grupo_productos[i] < producto_minimo)
+                {
+                    producto_minimo = grupo_productos[i];
+                    indice_minimo = i;
+                }
+            }
+            
+        if(producto_minimo < 0)
+        {
+            return("Error " + "Numero " + producto_minimo + " Indice " + indice_minimo);
+        }
+        else
+        {
+            return("Exito");
+        }
+    }
+    console.log(verificadora(producto3));
+
+    console.log("***** Ejercicio 4 *****");
+    /*Dado el siguiente arreglo [200,5500,900,7000,500,300] con los valores de cada
+    producto*/
+
+    var arreglo = [200,5500,900,7000,500,300];
+
+    console.log("*** Parte 1 ***");
+    /*Crea una función que retorne el valor del producto más costoso.*/
+
+    function costoso (mayor_producto)
+    {
+        var producto_maximo = 0;
+        for(let i = 0;i < mayor_producto.length;i++)
+        {
+            if(mayor_producto[i] > producto_maximo)
+            {
+                producto_maximo = mayor_producto[i];
+            }
+        }
+        return(producto_maximo);
+    }
+    console.log(costoso(arreglo));
+
+    console.log("*** Parte 2 ***");
+    /*Crea una función que retorne el valor del producto menos costoso.*/
+
+    function barato (minimo_producto)
+    {
+        var producto_maximo = 0;
+        for(let i = 0;i < minimo_producto.length;i++)
+        {
+            if(minimo_producto[i] > producto_maximo)
+            {
+                producto_maximo = minimo_producto[i];
+            }
+        }
+        var producto_minimo = producto_maximo;
+        for(let i = 0;i < minimo_producto.length;i++)
+        {
+            if(minimo_producto[i] < producto_minimo)
+            {
+                producto_minimo = minimo_producto[i];
+            }
+        }
+        return(producto_minimo);
+    }
+    console.log(barato(arreglo));
 
     </script>
 </body>
