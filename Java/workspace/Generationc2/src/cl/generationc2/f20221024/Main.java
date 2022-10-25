@@ -24,17 +24,17 @@ public class Main {
         System.out.println(numero1+numero2);
         System.out.println(decimal+""+decimal2+" "+decimal3+" "+caracter+" "+respuesta);
 
-        String palabra= "qwerty";
+        //String palabra= "qwerty";
 
 
 
 
         //variables objeto
-        Integer numero3= 2;//variable numerica -2^31 y +2^31-1
+        //Integer numero3= 2;//variable numerica -2^31 y +2^31-1
         //numero2.
-        Long numero4 = 12312312312L;
-        Float numero5 = (float) 435342432;
-        Double numero6 = 1231231243223D;
+       // Long numero4 = 12312312312L;
+       // Float numero5 = (float) 435342432;
+        //Double numero6 = 1231231243223D;
 
         //conversion a otros tipos de datos numericos
         
