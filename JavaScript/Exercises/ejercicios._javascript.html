@@ -18,16 +18,46 @@
         muestra otro prompt pidiendo otro número, finalmente el programa muestra una alerta con 
         el resultado de la suma.*/
 
+        var numero1 = parseInt(prompt("Elige un numero",0));
+        var numero2 = parseInt(prompt("Elige otro numero",0));
+        var suma = numero1 + numero2;
+        console.log("Primer numero",numero1);
+        console.log("Segundo numero",numero2);
+        console.log("La suma es",suma);
+        //alert("La suma es",suma); //solo se puede colocar una cosa en alert, por eso no me acepta el string y numero
+        //falso, es por la coma que no me aparece
+        alert("La suma es " + suma); 
+
         console.log("***** Ejercicio 2 *****");
         /*Crear un programa donde el usuario ingrese en un prompt la temperatura en Celcius y el 
         programa muestre en una alerta la temperatura en Fahrenheit.*/
+
+        var temperatura_celcius = parseInt(prompt("Temperatura en celcius",0));
+        var temperatura_fharenheit = (temperatura_celcius * (9 / 5)) + 32;
+        console.log("La temperatura en celcius es",temperatura_celcius);
+        console.log("La temperatura en fahrenheit es",temperatura_fharenheit);
+        alert("Temperatura en fahrenheit " + temperatura_fharenheit);
 
         console.log("***** Ejercicio 3 *****");
         /*Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 
         10  igual 0.5*/
 
+        var numero_ = parseInt(prompt("Ingrese un numero",0)); //solo ingresa numeros enteros aunque escribas con decimal
+        //var numeross = parseFloat(prompt("float",0)); //parseFloat ingresa numeros con decimales
+        //console.log(numeross);
+        var division = numero_ / 10;
+        console.log("Numero ingresado",numero_);
+        console.log("Numero dividido por 10 es",division);
+        alert("Su numero dividido por 10 es " + division);
+
         console.log("***** Ejercicio 4 *****");
         /*Si a = [1,2,3] crear un script que determine de muestre un alert del tipo de dato de a.*/
+
+        var a = [1,2,3];
+        var a_alert = typeof(a);
+        console.log("El array es",a);
+        console.log("El tipo de dato es",a_alert); //como los numeros estan dentro del arreglo se reconoce como object
+        alert("El tipo de dato es " + a_alert);
 
         console.log("********** Segunda Parte **********");
 
@@ -37,9 +67,37 @@
         /*Crear un programa que determine si un número introducido en un Prompt es par o no, la 
         respuesta será mostrada en una alerta.*/
 
+        var numeros = parseInt(prompt("Ingrese numero",0));
+        //console.log(numeross % 6); //% da el resto de la division si es 23/6->parte entera es 3 y 3*6=18 y 23-18=5 por lo tanto 23%6=5
+        var resto_numeros = numeros % 2;
+        console.log("El numero ingresado es",numeros);
+        if(resto_numeros == 0 )
+        {
+            alert("El numero es par");
+            console.log("El numero es par");
+        }
+        else{
+            alert("El numero es impar");
+            console.log("El numero es impar");
+        }
+
         console.log("***** Ejercicio 2 *****");
         /*Crear un programa que determine si un número introducido en un Prompt es divisible por 5
         o no, mostrar el resultado con console.log*/
+
+        var num = parseInt(prompt("Ingrese un numero",0));
+        var num_resto = num % 5;
+        console.log("EL numero es",num);
+        if(num_resto == 0)
+        {
+            alert("El numero es divisible por 5");
+            console.log("EL numero es divisible por 5");
+        }
+        else
+        {
+            alert("El numero no es divisible por 5");
+            console.log("El numero no es divisible por 5")
+        }
 
         console.log("***** Ejercicio 3 *****");
         /*Crear un programa que determine si un número introducido en un popup es divisible por 

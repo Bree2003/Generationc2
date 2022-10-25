@@ -65,7 +65,11 @@ public class Arreglos {
 			numeross[numeross.length - i] = i;
 ;		}
 		System.out.println(Arrays.toString(numeross));
-
+		
+		//subir colores al array colores
+		String [] colores = new String [5];
+		colores[0] = "rosa";
+		System.out.println(Arrays.toString(colores));
 	}
 
 }
