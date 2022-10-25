@@ -42,6 +42,22 @@ Puntos a evaluar:
 ● Definición correcta de variables.
 ● Lógica de programación*/
 
+//var digitos = [];//123
+var resultado = 0;
+var digito = prompt("Ingresa un numero mayor de 2 digitos: ",0)
+console.log(digito)
+//digitos = digito //no hizo push para subirlo al arreglo,->el arreglo se convierte en el texto
+console.log(digito.length)
+
+for(let i = 0;i<digito.length;i++){
+
+    console.log(digito[i])
+    resultado = resultado + parseInt(digito[i])
+
+}
+
+console.log(resultado)
+
     </script>
 </body>
 </html>

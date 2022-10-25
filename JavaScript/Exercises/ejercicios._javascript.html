@@ -14,9 +14,9 @@
         console.log("OPERACIONES BASICAS, TIPOS DE DATOS, PROMPT Y ALERT");
 
         console.log("***** Ejercicio 1 *****");
-        /* Escribir un programa que muestre un prompt donde el usuario ingresa un número, luego 
-        muestra otro prompt pidiendo otro número, finalmente el programa muestra una alerta con 
-        el resultado de la suma.*/
+          /* Escribir un programa que muestre un prompt donde el usuario ingresa un número, luego 
+          muestra otro prompt pidiendo otro número, finalmente el programa muestra una alerta con 
+          el resultado de la suma.*/
 
         var numero1 = parseInt(prompt("Elige un numero",0));
         var numero2 = parseInt(prompt("Elige otro numero",0));
@@ -42,11 +42,11 @@
         /*Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 
         10  igual 0.5*/
 
-        var numero_ = parseInt(prompt("Ingrese un numero",0)); //solo ingresa numeros enteros aunque escribas con decimal
+        var numero = parseInt(prompt("Ingrese un numero",0)); //solo ingresa numeros enteros aunque escribas con decimal
         //var numeross = parseFloat(prompt("float",0)); //parseFloat ingresa numeros con decimales
         //console.log(numeross);
-        var division = numero_ / 10;
-        console.log("Numero ingresado",numero_);
+        var division = numero / 10;
+        console.log("Numero ingresado",numero);
         console.log("Numero dividido por 10 es",division);
         alert("Su numero dividido por 10 es " + division);
 
@@ -85,10 +85,10 @@
         /*Crear un programa que determine si un número introducido en un Prompt es divisible por 5
         o no, mostrar el resultado con console.log*/
 
-        var num = parseInt(prompt("Ingrese un numero",0));
-        var num_resto = num % 5;
-        console.log("EL numero es",num);
-        if(num_resto == 0)
+        var numero = parseInt(prompt("Ingrese un numero",0));
+        var resto_numero = numero % 5;
+        console.log("EL numero es",numero);
+        if(resto_numero == 0)
         {
             alert("El numero es divisible por 5");
             console.log("EL numero es divisible por 5");
@@ -103,14 +103,53 @@
         /*Crear un programa que determine si un número introducido en un popup es divisible por 
         11 y 5 o no, mostrar el resultado con console.log*/
 
+        var numero = parseInt(prompt("Ingrese un numero",0));
+        var resto_numero5 = numero % 5;
+        var resto_numero11 = numero % 11;
+        console.log("El numero es",numero);
+        if(resto_numero11 == 0 && resto_numero5 == 0) //&& -> y || -> o
+        {
+            alert("El numero es divisible por 11 y 5");
+            console.log("El numero es divisible por 11 y 5");
+        }
+        else
+        {
+            alert("El numero no es divisible por 11 y 5");
+            console.log("El numero no es divisible por 11 y 5");
+        }
+
         console.log("***** Ejercicio 4 *****");
         /*Crear un programa  que le pida al usuario dos números en un Prompt y luego muestre en 
         un alerta el número mayor.*/
+
+        var numero1 = parseInt(prompt("Ingrese un numero",0));
+        var numero2 = parseInt(prompt("Ingrese sengundo numero",0));
+        console.log("Primer numero",numero1);
+        console.log("Segundo numero",numero2);
+        if(numero1 > numero2)
+        {
+            alert("El numero mayor es " + numero1);
+            console.log("El numero mayor es",numero1);
+        }
+        else
+        {
+            alert("El numero mayor es " + numero2);
+            console.log("El numero mayor es",numero2);
+        }
 
         console.log("***** Ejercicio 5 *****");
         /*Crear un programa que le pida al usuario primero un  números al usuario a través de un 
         prompt y luego un segundo número para luego mostrar en un alerta el número mayor, esta 
         vez realizar el ejercicio ocupando un if ternario.*/
+
+        var numero1 = parseInt(prompt("Ingresa un numero",0));
+        var numero2 = parseInt(prompt("Ingresa otro numero",0));
+        var numero_mayor = (numero1 > numero2) ? ("El mayor es " + numero1) : ("El mayor es " + numero2);
+        alert(numero_mayor);
+        console.log("Primer numero",numero1);
+        console.log("Segundo numero",numero2);
+        console.log(numero_mayor);
+
 
         console.log("***** Ejercicio 6 *****");
         /*El siguiente código tiene un error, descubrirlo y arreglarlo:
@@ -125,6 +164,26 @@
         }
         ~~~*/
 
+        var edad = parseInt(prompt("Escribe tu edad", 0));
+        if(edad < 13)
+        {
+          console.log("Tu edad es",edad);
+          console.log("Es un niño");
+          alert("Es un niño");
+        }
+        else if (edad > 18)
+        {
+          console.log("Tu edad es",edad);
+          console.log("Es un adulto");
+          alert("Es un adulto");
+        }
+        else
+        {
+          console.log("Tu edad es",edad);
+          console.log("Es un adolescente");
+          alert("Es un adolescente");
+        }
+
         console.log("********** Tercera Parte **********");
 
         console.log("LOOPS");
@@ -136,20 +195,78 @@
         /* Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa el usuario 
         en un prompt.*/
 
+        var numero = parseInt(prompt("Ingresa un numero",0));
+        var numerosde1en1 = [];
+        for(let i = 1;i <= numero;i++)
+        {
+           numerosde1en1.push(i); //push->parentesis posicion->corchetes
+        }
+        console.log("El numero es",numero);
+        console.log(numerosde1en1);
+
         console.log("***** Ejercicio 2 *****");
         /*Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario 
         en un prompt.*/
+        
+        var numero = parseInt(prompt("Ingresa un numero",0));
+        var numero_resto = numero % 2;
+        var numero_mitad = parseInt(numero/2);
+        var numeros_par = [];
+        var numeros_impar = [];
+
+        if(numero_resto == 0)
+        {
+          for(let i = 1;i <= numero_mitad;i++)
+          {
+            numeros_par.push(i*2); //push->parentesis operatoria->corchetes operatoria tipo array = array + sumaarray[i]
+          }
+          console.log("El numero es",numero);
+        console.log(numeros_par);
+        }
+        else
+        {
+          for(let i = 1;i <= (numero_mitad + 1);i++)
+          {
+            numeros_impar.push((i*2) - 1);
+          }
+          console.log("El numero es",numero);
+        console.log(numeros_impar);
+        }
 
         console.log("***** Ejercicio 3 *****");
         /*Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario 
         en un prompt.*/
 
+        var numero = parseInt(prompt("Ingrese un numero",0));
+        var numeros_enmenos1 = [];
+        for(let i = numero;i >= 1;i--)
+        {
+            numeros_enmenos1.push(i);
+        }
+        console.log("Numero ingresado",numero);
+        console.log(numeros_enmenos1);
+
         console.log("***** Ejercicio 4 *****");
         /*Escribir utilizando console.log la tabla del 9 hasta 9x10.*/
+
+        for(let i = 1;i <= 10;i++)
+        {
+            console.log("9*"+ i+"=",[i*9]);
+        }
         
         console.log("***** Ejercicio 5 *****");
         /*Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, 
         validar que el número ingresado no contenga letras.*/
+
+        var numero = prompt("Ingrese un numero",0);
+        var suma = 0;
+        for(let i = 0;i < numero.length ;i++)
+        {
+          suma = suma + parseInt(numero[i]);
+        }
+        console.log("Numero ingresado",numero);
+        console.log("La suma de sus digitos es",suma);
+        alert("La suma de los digitos es " + suma);
 
         console.log("***** Ejercicio 6 *****");
         /*Realizar la suma de todos los números pares entre N y M donde N y M los ingresa un 
@@ -196,6 +313,19 @@
 
         console.log("***** Ejercicio 3 *****");
         /*Crear una función que reciba dos valores y devuelva la suma de ellos.*/
+        
+        var numero1 = parseInt(prompt("Ingresa un numero",0));
+        var numero2 = parseInt(prompt("Ingresa otro numero",0));
+        function suma_de_numeros (primer_numero,segundo_numero)
+        {
+          return(numero1 + numero2);
+        }
+        var suma_numeros = suma_de_numeros(numero1,numero2);
+        console.log("El primer numero es",numero1);
+        console.log("El segundo numero es",numero2);
+        console.log("La suma es",suma_numeros);
+        alert("La suma es " + suma_numeros);
+
 
         console.log("***** Ejercicio 4 *****");
         /*Crear una función que reciba un número entero y muestre un error si el tipo de dato 
@@ -203,6 +333,11 @@
 
         console.log("***** Ejercicio 5 *****");
         //Crear una función autoejecutable que muestre "muuu" en pantalla
+
+        (function muuu ()
+        {
+          document.write("Muuuuuuu");  //colocar la funcion en parentesis y al final colocar (); para autoejecutar
+        })();
 
         console.log("********** Quinta Parte **********");
 
@@ -212,6 +347,8 @@
         //Dado el array = [1,2,3,4,5,6]
         /*Iterar por todos los elementos dentro de un array utilizando while y mostrarlos en 
         pantalla.*/
+
+        var array = [1,2,3,4,5,6];
 
         console.log("***** Ejercicio 2 *****");
         //Dado el array = [1,2,3,4,5,6]
@@ -245,6 +382,22 @@
         console.log("***** Ejercicio 9 *****");
         /*Dado un array que contiene ["azul", "amarillo", "rojo", "verde", "café", "rosa"] determinar si 
         un color introducido por el usuario se encuentra dentro del array o no.*/
+
+        var array = ["azul","amarillo","rojo","verde","cafe","rosa"];
+        var color = prompt("Ingresa un color");
+        color = color.toLowerCase();
+        if(color == "azul" || color == "amarillo" || color == "rojo" || color == "verde" || color == "cafe" || color == "rosa")
+        {
+          console.log("Color ingresado",color);
+          console.log("El color esta en el grupo");
+          alert("El color esta en el grupo");
+        }
+        else
+        {
+          console.log("Color ingresado",color);
+          console.log("El color no esta en el grupo");
+          alert("El color no esta en el grupo");
+        }
 
         console.log("********** Sexta Parte **********");
 
