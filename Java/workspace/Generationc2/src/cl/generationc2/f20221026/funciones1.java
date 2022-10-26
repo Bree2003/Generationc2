@@ -1,4 +1,4 @@
-package cl.generationc2.f20221025;
+package cl.generationc2.f20221026;
 
 import java.util.Arrays;
 
@@ -17,6 +17,9 @@ public class funciones1 {
 		System.out.println(retorno1());
 		Integer valorRetornado = retorno1();
 		System.out.println(valorRetornado + 35);
+		String nombreCompleto = getNombreCompleto("Brisa", "Sandoval", "Hernandez");
+		System.out.println(nombreCompleto);
+		llamadaAOtroMetodo();
 	}
 	//definicion o estructura de un metodo
 	//void->el metodo no retorna ningun valor
@@ -51,5 +54,26 @@ public class funciones1 {
 	{
 		Integer totalAlumnos = 35;
 		return totalAlumnos;
+	}
+	
+	/**
+	 * 
+	 * @param nombre
+	 * @param apePaterno
+	 * @param apeMaterno
+	 * @return nombreCompleto
+	 */
+	
+	public static String getNombreCompleto(String nombre,String apePaterno,String apeMaterno)
+	{
+		String nombreCompleto = nombre + " " + apePaterno + " " + apeMaterno;
+		return nombreCompleto;
+	}//swagger
+	
+	//metodo que llama a otro metodo
+	
+	public static void llamadaAOtroMetodo() {
+		System.out.println("Llamada a otro metodo desde un metodo");
+		metodos(1234, 54.3f);
 	}
 }
