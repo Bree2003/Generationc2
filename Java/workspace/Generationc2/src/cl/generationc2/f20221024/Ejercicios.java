@@ -2,7 +2,7 @@ package cl.generationc2.f20221024;
 
 import java.util.Arrays;
 
-public class ejercicios7 {
+public class Ejercicios {
 
 	public static void main(String[] args) {
 		//ejercicio 1 maximo y minimo

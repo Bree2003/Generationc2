@@ -2,7 +2,7 @@ package cl.generationc2.f20221026;
 
 import java.util.Arrays;
 
-public class funciones1 {
+public class Funciones1 {
 
 	public static void main(String[] args) {
 		// funciones o metodo

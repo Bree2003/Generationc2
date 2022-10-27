@@ -99,7 +99,8 @@ public class Menu {
 				System.out.println("opcion no valida");
 				
 			}
-		}	
+		}
+		sc.close();
 	}
 	
 	public static void menu() //llamar metodo desde el main

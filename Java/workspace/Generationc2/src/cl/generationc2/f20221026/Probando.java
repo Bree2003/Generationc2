@@ -2,7 +2,7 @@ package cl.generationc2.f20221026;
 
 import java.util.Scanner;
 
-public class probando {
+public class Probando {
 
 
 	public static void main(String[] args) {

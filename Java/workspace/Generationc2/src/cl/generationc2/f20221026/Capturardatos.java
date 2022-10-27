@@ -2,7 +2,7 @@ package cl.generationc2.f20221026;
 
 import java.util.Scanner;
 
-public class capturardatos {
+public class Capturardatos {
 
 	public static void main(String[] args) 
 	{
