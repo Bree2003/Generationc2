@@ -40,6 +40,8 @@ public class Ejercicio {
 		while(opciones < 0 || opciones > 3);
 		
 		
+		
+		
 		if(opciones == 0 || contadorErrores == 0)
 		{
 			System.out.println("Adios");
@@ -89,19 +91,20 @@ public class Ejercicio {
 				
 			}
 		}	
+		sc.close();
 	}
+	
 	
 	public static void menu() //llamar metodo desde el main
 	{
 		System.out.println("**************");
 		System.out.println("     MENU     ");
 		System.out.println("**************");
-		System.out.println("1.- Triangulo  ");
+		System.out.println("1.-   Circunferencia");
 		System.out.println("2.-  Rectangulo    ");
-		System.out.println("3.- Circunferencia");
+		System.out.println("3.- Triangulo");
 		System.out.println("0.-    Salir     ");
 	}
-			
 	
 
 }
