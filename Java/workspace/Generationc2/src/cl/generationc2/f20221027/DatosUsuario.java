@@ -25,7 +25,15 @@ public class DatosUsuario {
 			System.out.println("Ingrese direccion");
 			usuario.setDireccion(d_usuario.next());
 			System.out.println(usuario);
+			
+			Integer numeros = d_usuario.nextInt();
+			integer numero = 0;
 	
+			do
+			{
+				
+			}
+			while(numero < numeros);
 		
 		
 		d_usuario.close();

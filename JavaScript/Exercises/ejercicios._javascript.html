@@ -8,10 +8,28 @@
 </head>
 <body>
     <script>
-
-      console.log("***** Ejercicio 13 *****");
-      //Generar los primeros N números perfectos.
       
+      console.log("***** Ejercicio 7 *****");
+      /*Crear un array vacío, luego generar 20 números al azar y guardarlos en un array.*/
+
+      var arrey = [];
+      var numero = 0;
+
+      while(numero < 20)
+      {
+        arrey.push((Math.random()+0.01)*20);
+      }
+      console.log(arrey);
+
+
+      function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+// Ahora, tanto el valor mínimo como el máximo están incluidos en el resultado.
+      
+
     </script>
 </body>
 </html>
