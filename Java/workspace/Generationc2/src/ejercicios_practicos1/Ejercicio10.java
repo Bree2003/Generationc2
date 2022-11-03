@@ -1,9 +1,9 @@
-package ejercicios_javascript;
+package ejercicios_practicos1;
 
 import java.util.Scanner;
 
-public class Ejercicios_practicos1 {
-
+public class Ejercicio10 {
+	
 	public static void main(String[] args) {
 		System.out.println("***** Ejercicio 10 *****");
 		/*Escriba un algoritmo que permita determinar cuánto dinero ahorra una persona en un año si
@@ -40,5 +40,5 @@ public class Ejercicios_practicos1 {
 		usuario.close();
 		
 	}
-	
+
 }
