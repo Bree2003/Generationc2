@@ -118,15 +118,15 @@ public class AutosVentas {
 	//atributos de control
 	//agrega a la columna la fecha antes de insertar
 	@PrePersist
-	    protected void onCreate(){
-	        this.createdAt = new Date();
-	    }
+	protected void onCreate(){
+	this.createdAt = new Date();
+	}
 	//fecha en la que se actualiza
-	    @PreUpdate
-	    protected void onUpdate(){
-	        this.updatedAt = new Date();
-	    }
-	    
+	@PreUpdate
+	protected void onUpdate(){
+	this.updatedAt = new Date();
+	}
+	
 	
 	
 	

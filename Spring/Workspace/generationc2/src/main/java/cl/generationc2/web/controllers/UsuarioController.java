@@ -3,8 +3,9 @@ package cl.generationc2.web.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import cl.generationc2.web.models.Rol;
+
 @Controller
-@RequestMapping("/usuario")
 public class UsuarioController {
 
 	//htpps://localhost:8080/
@@ -26,5 +27,16 @@ public class UsuarioController {
 		public String brisasandoval() {
 			System.out.println("en el metodo de brisa");
 			return "Brisa Sandoval";
+		}
+
+		@RequestMapping("/rol")
+		public Rol obtenerRol(){
+			Rol rol = new Rol();
+			rol.setNombre("admin");
+			rol.setDescripcion("puedo hacerlo todo");
+			
+
+			
+			return rol;
 		}
 }

@@ -1,6 +1,5 @@
 package cl.generationc2.web.models;
 
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,7 +27,6 @@ public class Pais {
 	private String capital;
 	
 	//private Date createdAt;
-	
 	//private Date updatedAt;
 
 	public Pais() {
