@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos CSS</title>
+    <style> 
+        *{
+            margin: 0px;
+            padding: 0px;
+            /*eliminar/resetear las distancias o separaciones entre los elementos*/
+            /*asterisco significa todo*/
+        }
+        /*3 formas de asignar estilos*/
+        /*1->a través del elemento (etiqueta)*/
+        p{/*las etiquetas solo se llaman con su nombre*/
+            color:blue; /*cambia color de la letra*/
+        }
+        div{
+            background-color: lightcoral;
+            width: 200px; /*ancho*/
+            height: 200px; /*alto*/
+            font-weight: 900;
+        }
+        /*2->a traves de clases*/
+        /*estilo a 1 o más elementos*/
+        .parrafo1{/*las clases se llaman con punto*/
+            color:rgb(144, 10, 45) !important; /*al haber dicho important, tiene mayor importancia que el id*/
+            background-color: aquamarine;
+        }
+        /*3->a través del id*/
+        /*el estilo solo se aplica a 1 elemento*/
+        #parrafo4{
+            color: brown;
+            background-color: greenyellow;
+        }
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            font-family: cursive;
+        }
+        #padre{
+            background-color: yellowgreen;
+            width: 400px;
+            height: 400px;
+            border: 1px solid;
+        }
+        
+        #hijo{
+            background-color: whitesmoke;
+            width: 40px;
+            height: 40px;
+            margin: 160px;
+            margin-left: 140px;
+            
+        }
+
+        #hijo1{
+            background-color: whitesmoke;
+            height: 40px;
+            width: 200px;
+            margin-top: -100px;
+            margin-left: 50px;
+
+        }
+        #hijo2{
+            background-color: whitesmoke;
+            height: 40px;
+            width: 40px;
+            margin-top: -220px;
+            margin-left: 50px;
+        }
+
+        #hijo3{
+            background-color: whitesmoke;
+            height: 40px;
+            width: 40px;
+            margin-top: -40px;
+            margin-left: 220px;
+        }
+
+    </style>
+    <!-- mientras el estilo esté más cerca del elemento toma prioridad -->
+</head>
+<body>
+    <div> <!-- nos permite realizar/generar divisiones en secciones -->
+        <p>párrafo 1</p>
+        <p class="parrafo1">párrafo 2</p>
+        <p class="parrafo1">párrafo 3</p>
+        <p id="parrafo4" class="parrafo1">párrafo 4</p>
+        <a href="http://www.sii.cl">visite sii</a>
+    </div>
+
+    <h2>Margin y Padding</h2>
+    <br>
+    <div id="padre">
+        
+        <div id="hijo"></div>
+        <div id="hijo1"></div>
+        <div id="hijo2"></div>
+        <div id="hijo3"></div>
+    </div>
+
+    <!-- todos los elementos parten/nacen desde la izquierda -->
+</body>
+</html>

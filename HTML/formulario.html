@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <!-- etiquetas -->
+    <label for="nombre">Nombre:</label>
+    <!-- si agregamos nombre en el for al momento de pinchar en Nombre: nos va a llevar al input  -->
+    <input type="text" id="nombre">
+    <br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido">
+    <!-- name->lleva la info a backend -->
+    <br>
+    <label for="correo">Email:</label>
+    <input type="email" id="correo" name="correo">
+    <br>
+    <label for="pass">Contraseña:</label>
+    <input type="password" id="pass" name="pass" placeholder="ingrese contraseña">
+    <br><hr>
+
+    <!-- radio button -->
+    <h2>Radio Buttons</h2>
+    <label for="femenino">Femenino</label>
+    <input type="radio" id="femenino" name="sexo" value="femenino">
+    <br>
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="masculino" name="sexo" value="masculino">
+    <br>
+    <label for="pnd">Prefiero no decir</label>
+    <input type="radio" id="pnd" name="sexo" value="pnd">
+    <!-- selectores para elegir una sola eleccion en donde se identifican con el name y con el value pasa al backend  -->
+    <br><hr>
+
+    <!-- select o combobox -->
+    <h2>Selectores</h2>
+    <select name="sexo2" id="sexo2" multiple>
+        <!-- multiple puedes seleccionar varias opciones yno puedes deseleccionarlas -->
+        <!-- por costumbre se agrega una option con el value cero  -->
+        <option value="0">Seleccione su sexo</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+        <option value="pnd">Prefiero no decir</option>
+    </select>
+    <!-- se llena estatica o base de datos  -->
+    <br><hr>
+
+    <!-- checkboxes -->
+    <h2>Checkboxes</h2>
+    <!-- nos permite seleccionar más de una opción o ninguna -->
+    <label for="lunes">Lunes</label>
+    <input type="checkbox" id="lunes" name="semana" value="lunes">
+    <br>
+    <label for="martes">Martes</label>
+    <input type="checkbox" id="martes" name="semana" value="martes">
+    <br>
+    <label for="miercoles">Miércoles</label>
+    <input type="checkbox" id="miercoles" name="semana" value="miercoles">
+    <br>
+    <input type="checkbox" id="jueves" name="semana" value="jueves">
+    <label for="jueves">Jueves</label>
+    <br><!-- shift+alt+a -->
+    <input type="checkbox" id="viernes" name="semana" value="viernes">
+    <label for="viernes">Viernes</label>
+    <br><hr>
+
+    <!-- textarea  -->
+    <h2>Textarea</h2>
+    <textarea id="descripcion" name="descripcion" id="" cols="10" rows="10"></textarea>
+    <br><hr>
+
+    <!-- hidden -->
+    <!-- es un cuadro oculto -->
+    <h2>Hidden</h2>
+    <input type="hidden" id="" name="">
+    <!-- cuando queremos editar la información del usuario -->
+    <br><hr>
+
+    <!-- botones -->
+    <h2>Botones</h2>
+    <input type="button" value="Aceptar" onclick="alert('hola')">
+    <!-- value-> valor a capturar -->
+    <input type="submit" value="Enviar">
+    <!-- encargado de enviar la información al backend  -->
+</body>
+</html>

@@ -1,8 +1,6 @@
 package cl.generationc2.web.services;
 
-import java.util.List;
-import java.util.Optional;
-
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,78 +8,28 @@ import cl.generationc2.web.models.Usuario;
 import cl.generationc2.web.repositories.UsuarioRepository;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioService{
-	// logica de negocio del sistema web
-	
+public class UsuarioServiceImpl implements UsuarioService {
+
 	@Autowired
-	private UsuarioRepository usuarioRepository;
+	private UsuarioRepository uRepository;
 
 	@Override
-	public Usuario guardarUsuario(Usuario usuario) {
-		
-		return  usuarioRepository.save(usuario);
-	}
-
-	@Override
-	public String eliminarUsuario(Long id) {
-		// TODO Auto-generated method stub
-		
-		Boolean existe = usuarioRepository.existsById(id);
-		//elimino el usuario pasando el id
-		//Usuario usuario = usuarioRepository.findById(id).get();
-		//validar si fue eliminado o no el registro
-		
-		if(existe) {
-			usuarioRepository.deleteById(id);
+	public Boolean guardarUsuario(Usuario usuario) {
+		//validar el usuario(email)
+		Usuario retornoUsuario = uRepository.findByCorreo(usuario.getCorreo());
+		//sSystem.out.println(retornoUsuario.getCorreo());
+		if(retornoUsuario == null) {
+			//encripta contraseña 1234->123412321
+			String passHashed = BCrypt.hashpw(usuario.getPass(), BCrypt.gensalt());
+			usuario.setPass(passHashed);//reemplazando el valor por el hash
+			uRepository.save(usuario);
+			return true;
 		}else {
-			return "Usuario no existe en la tabla";
+			return false;
 		}
 		
-		 existe = usuarioRepository.existsById(id);
-		//si es distinto de nulo no fue eliminado
-		if(existe) {
-			return "usuario no eliminado";
-		}
-		return "El usuario fue eliminado";
-	}
 
-	@Override
-	public String actualizarUsuario(Usuario usuario) {
-		
-		Boolean existe = usuarioRepository.existsById(usuario.getId());
-		
-		if(existe) {
-			usuarioRepository.save(usuario);
-			return "usuario actualizado";
-		}
-		
-		return "usuario no actualizado";
-	}
-
-	@Override
-	public Optional<Usuario> obtenerUsuario(Long id) {
-		
-		Optional<Usuario> mensaje = usuarioRepository.findById(id);
-	
-		return mensaje;
-	}
-
-	@Override
-	public Usuario obtenerUsuario2(Long id) {
-Boolean existe = usuarioRepository.existsById(id);
-		
-		if(existe) {
-		Usuario user = usuarioRepository.findById(id).get();
-		return user;
-		}
-		return null;
-	}
-
-	@Override
-	public List<Usuario> listadoUsuario() {
-		//obtener todos los usuarios
-		return usuarioRepository.findAll();
 	}
 	
-
+	
 }

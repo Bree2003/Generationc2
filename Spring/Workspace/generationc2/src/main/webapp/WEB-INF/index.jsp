@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>INDEX</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1>Hola estoy en el JSP</h1>
+<h2>Registrado exitosamente</h2>
 
 </body>
 </html>
