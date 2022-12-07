@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +47,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Disabled</a>
-                            </li>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,7 +58,7 @@
         </nav>
         <h1>Hello, world!</h1>
 
-        <label for="nombre" class="form-label">Nombre:</label><!-- el id acompaÃ±a al for -->
+        <label for="nombre" class="form-label">Nombre:</label><!-- el id acompaña al for -->
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="ingresa tu nombre" />
         <br>
         <button type="button" class="btn btn-outline-secondary">Secondary</button>

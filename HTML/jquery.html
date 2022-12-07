@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <!-- JQuery->perimte manipular parte interna de la página -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gestiona dependencias, es una librería  -->
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script>
+    //bloque de jquery
+    //se ejecutará TODO lo que está adentro
+    //$('id/clase/elemento').accion();
+    $(document).ready(function(){
+        //todo dentro del document ready
+        $('#btn1').click(function(){
+            var text1 = $('#parrafo1').text(); //text permite capturar el texto entre las etiquetas
+            console.log(text1);
+            $('#parrafo1').text("nuevo texto para el farrafo 1");
+        }
+        );
+
+        //funciones básicas de JQuery
+        //efectos
+        $('#btn2').click(function(){
+            $('#parrafo2').hide();//ocultar 
+        });
+        $('#btn3').click(function(){
+            $('#parrafo2').show();//ocultar 
+        });
+        $('#btn4').click(function(){
+            $('#parrafo2').toggle();//ocultar y muestra
+        });
+
+        //Slide
+        $('#btn5').click(function(){
+            $('#parrafo3').slideUp();//mostrar
+        });
+        $('#btn6').click(function(){
+            $('#parrafo3').slideDown();//ocultar 
+        });
+        $('#btn7').click(function(){
+            $('#parrafo3').slideToggle();//ocultar y muestra
+        });
+
+        //Fade
+        $('#btn8').click(function(){
+            $('#parrafo4').fadeIn(3000);//ocultar 3000=3 segundos
+        });
+        $('#btn9').click(function(){
+            $('#parrafo4').fadeOut();//desvanecer
+        });
+        $('#btn10').click(function(){
+            $('#parrafo4').fadeToggle();//ocultar y muestra
+        });
+
+        //manipulación
+        $('#btn11').click(function(){
+            $('#parrafo5').after('<p id="parrafo5">parrafo after</p>');//agrega después
+        });
+        $('#btn12').click(function(){
+            $('#parrafo5').append('<p>parrafo append 2</p>');//agrega dentro
+        });
+        $('#btn13').click(function(){
+            $('#parrafo5').prepend('<p>parrafo prepend </p>');//agrega dentro y antes
+        });
+        $('#btn14').click(function(){
+            $('#parrafo5').prepend('<p>parrafo before </p>');//agrega antes
+        });
+
+        //attr ->agregar un atributo a una etiqueta
+        $('#btn15').click(function(){
+            $('#parrafo5').attr("name","np5");
+            $('#parrafo5').attr("style","color:red");//agrega o sobreescribe atributo
+        });
+
+        //estilo
+        $('#btn16').click(function(){
+            $('#parrafo6').addClass("fs-1");//agrega clase
+            $('#parrafo6').addClass("text-success");
+        });
+        $('#btn17').click(function(){
+            $('#parrafo6').removeClass("fs-1");//eliminaclase
+        });
+        $('#btn18').click(function(){
+            $('#parrafo6').removeClass("text-success");
+            $('#parrafo6').css("color","blue");//eliminaclase
+        });
+        
+
+    //cierre o fin de jquery
+    });
+</script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- id->css, darle estilo y funcionalidad
+        name->backend, capturar dato y llevarlo a la base de datos -->
+        
+        <p id="parrafo1">esto es un texto para el párrafo 1</p>
+        <br>
+        <button id="btn1" class="btn btn-outline-danger">hola</button>
+        <br><hr>
+        <h2>Efectos</h2>
+        <p id="parrafo2">esto es un texto para el párrafo 2</p>
+        <br>
+        <button id="btn2" class="btn btn-outline-success">Hide()</button>
+        <button id="btn3" class="btn btn-outline-info">Show()</button>
+        <button id="btn4" class="btn btn-outline-warning">Toggle()</button>
+        <br><hr>
+        <p id="parrafo3">esto es un texto para el párrafo 3</p>
+        <br>
+        <button id="btn5" class="btn btn-outline-success">SlideUp()</button>
+        <button id="btn6" class="btn btn-outline-info">SlideDown()</button>
+        <button id="btn7" class="btn btn-outline-warning">SlideToggle()</button>
+        <br><hr>
+        <p id="parrafo4">esto es un texto para el párrafo 4</p>
+        <br>
+        <button id="btn8" class="btn btn-outline-success">FadeIn()</button>
+        <button id="btn9" class="btn btn-outline-info">FadeOut()</button>
+        <button id="btn10" class="btn btn-outline-warning">FadeToggle()</button>
+        <br><hr>
+        <h2>Manipulación</h2>
+        <p id="parrafo5">Manipular informacion del parrafo </p>
+        <br>
+        <button id="btn11" class="btn btn-outline-success">After()</button>
+        <button id="btn14" class="btn btn-outline-danger">Before()</button>
+        <button id="btn12" class="btn btn-outline-info">Append()</button>
+        <button id="btn13" class="btn btn-outline-warning">Prepend()</button>
+        <button id="btn15" class="btn btn-outline-warning">Attr()</button>
+        <br><hr>
+        <h2>Estilos</h2>
+        <p id="parrafo6">Manipular estilos del parrafo </p>
+        <br>
+        <button id="btn16" class="btn btn-outline-success">AddClass()</button>
+        <button id="btn17" class="btn btn-outline-danger">RemoveClass()</button>
+        <button id="btn18" class="btn btn-outline-info">Css()</button>
+        <button id="btn13" class="btn btn-outline-warning">Prepend()</button>
+    </div>
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

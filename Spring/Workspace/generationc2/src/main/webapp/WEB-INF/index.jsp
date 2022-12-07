@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Registrado exitosamente</h2>
+<h2>Compra existosa</h2>
 
 </body>
 </html>

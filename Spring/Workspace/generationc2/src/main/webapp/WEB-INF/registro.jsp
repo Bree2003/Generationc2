@@ -29,7 +29,7 @@
     <div class="container-fluid">
 	    <div class="card">
 		  <div class="card-body">
-		    <form action="/registro/formulario" method="post">
+		    <form action="/registro/usuario" method="post">
 		    <label for="nick" class="form-label">Nick:</label>
 		        <input type="text" class="form-control" id="nick" name="nick" placeholder="Ingresa nombre">
 		        <br>
@@ -50,6 +50,7 @@
 		        <br>
 		        
 		        <input type="submit" class="btn btn-outline-primary btn-lg" value="Enviar">
+		        <a role="button" class="btn btn-primary" href="/registro/login">Ingresar</a>
 		    </form>
 		  </div>
 		</div>

@@ -30,6 +30,30 @@ public class UsuarioServiceImpl implements UsuarioService {
 		
 
 	}
+
+	@Override
+	public Boolean ingresarUsuario(String correo, String pass) {
+		System.out.println(correo+" "+pass);
+		Usuario usuario = uRepository.findByCorreo(correo);
+		//validar
+		if(usuario!=null) {//existe
+			
+			//comparar contraseñas
+			//return BCrypt.checkpw(pass, usuario.getPass());
+			Boolean resultado = BCrypt.checkpw(pass, usuario.getPass());
+			
+			
+			//validar, comprobar,probar
+			if(resultado) {
+				return true;
+			}else {
+				return false;
+			}
+		}else {//no existe el email en bd
+			return false;
+		}
+		
+	}
 	
 	
 }
