@@ -1,0 +1,110 @@
+INSTANCIA AWS
+ubuntu mysql/aurora 
+tenemos compu en una parte del mundo
+
+archivo war en spring maven install
+de target se copia a carpeta ssh
+
+mover el archivo (IP PÚBLICA!!!!!!)
+scp -i genec2.pem generationc2-1.war ubuntu@54.167.188.30:~/
+
+entrar
+ssh -i "genec2.pem" ubuntu@54.167.188.30
+
+al entrar al ubuntu hacer update y upgrade
+sudo apt-get update
+sudo apt-get upgrade
+
+
+instalar apache
+sudo apt-get install apache2 -y
+
+instalar mysql
+sudo apt install mysql-server -y
+
+entrar mysql
+sudo mysql
+
+CREATE USER 'brisa'@'localhost' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON *.* TO 'brisa'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+crear carpeta
+sudo mkdir /var/springApp
+
+mover archivo a carpeta
+sudo mv ~/generationc2-1.war /var/springApp/
+
+Set up proxy
+sudo a2enmod proxy
+sudo a2enmod proxy_ajp
+sudo systemctl restart apache2
+
+abra archivo virtual
+cd /etc/apache2/sites-available/
+sudo nano 000-default.conf
+
+AGREGAR al final antes de </VirtualHost>
+ProxyPass / ajp://localhost:9090/ 
+ProxyPassReverse / ajp://localhost:9090/
+
+Reiniciamos apache
+sudo systemctl restart apache2
+
+Instalamos java
+sudo apt-get install default-jdk -y
+sudo apt install openjdk-18-jdk -y
+
+Acceder a la carpeta
+cd /var/springApp/
+
+Reiniciar MySQL
+sudo systemctl restart mysql
+systemctl status mysql
+
+entrar en mysql
+ mysql -u brisa -p
+password:  secret
+
+deployar war
+java -jar generationc2-1.war
+
+
+
+SYSTEMD JAVA
+para que corra sin que estemos iniciando a cada rato
+
+accedemos a system
+cd /etc/systemd/system
+
+creamos el archivo de servicio
+sudo touch javag5.service
+
+editamos el archivo de servicio
+sudo nano javag5.service
+
+pegamos en el archivo
+[Unit]
+Description=Application using Spring Boot
+After=syslog.target
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/java -jar /var/springApp/NOMBRE_DEL_WAR.war
+SuccessExitStatus=143
+[Install]
+WantedBy=multi-user.target
+
+reiniciamos el daemon
+sudo systemctl daemon-reload
+
+activamos el servicio
+sudo systemctl enable javag5.service
+
+activamos el servicio y vemos el estado
+sudo systemctl start javag5
+systemctl status javag5
+
+otros comandos
+sudo systemctl stop javag5
+sudo systemctl restart javag5
+

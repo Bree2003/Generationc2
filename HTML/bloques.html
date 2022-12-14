@@ -1,55 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica CSS</title>
     <!--<link rel="stylesheet" type="text/css" href="bloques.css">-->
-<style>
-    *{
-        margin: 0px;
-        padding: 0px;
-    }
-    #wrapper{
-        width: 950px;
-        background-color: grey;
-        margin: 0px auto;
-    }
-    #header{
-        min-height: 150px;
-        background-color: purple;
-    }
-    #navigation{
-        min-height: 300px;
-        width: 200px;
-        background-color: pink;
-    }
-    #main_content{
-        min-height: 400px;
-        width: 700px;
-        background-color: blue;
-    }
-    .subcontents{
-        min-height: 200px;
-        width: 210px;
-        background-color: yellow;
-    }
-    #advertisement{
-        min-height: 120px;
-        width: 660px;
-        background-color: green;
-    }
-</style>
+    <style>
+        /* gris */
+        #wrapper {
+            width: 1000px;
+            height: 710px;
+            background-color: gray;
+            margin: auto;
+            border: solid gray;
+        }
+
+
+        /* morado */
+        #header {
+            background-color: purple;
+            height: 180px;
+            width: 960px;
+            margin: 20px;
+        }
+
+
+        /* rosa */
+        #navigation {
+            width: 280px;
+            height: 470px;
+            background-color: pink;
+            margin-left: 20px;
+        }
+
+        /* azul */
+        #maincontent {
+            background-color: blue;
+            height: 465px;
+            width: 655px;
+            margin-left: 20px;
+            border: solid blue;
+        }
+
+        #container {
+            display: inline-flex;
+        }
+
+        #container2 {
+            display: inline-flex;
+            margin: 20px;
+            border: transparent;
+        }
+
+        /* amarillo */
+        .subcontents {
+            width: 193px;
+            height: 220px;
+            background-color: yellow;
+            margin-right: 20px;
+        }
+
+        /* verde */
+        #advertisement {
+            background-color: green;
+            width: 620px;
+            height: 190px;
+            margin-left: 20px;
+        }
+
+        /* CELULAR */
+        @media screen and (max-width: 480px) {
+            #wrapper {
+                width: 300px;
+                height: 600px;
+            }
+
+            #header {
+                height: 100px;
+                width: 260px;
+            }
+
+            #navigation {
+                display: none;
+            }
+
+            #maincontent {
+                width: 255px;
+                height: 440px;
+            }
+
+            #container2 {
+                display: block;
+            }
+
+            .subcontents {
+                width: 215px;
+                height: 90px;
+                margin-bottom: 20px;
+            }
+
+            #advertisement {
+                width: 215px;
+                height: 72px;
+                margin-left: 20px;
+            }
+        }
+
+        /* TABLET */
+        @media screen and (min-width: 481px) and (max-width:1023px) {
+            #wrapper {
+                width: 700px;
+                height: 900px;
+            }
+
+            #header {
+                height: 170px;
+                width: 660px;
+            }
+
+            #navigation {
+                display: none;
+            }
+
+            #maincontent {
+                height: 665px;
+                width: 655px;
+            }
+
+            #container2 {
+                display: block;
+            }
+
+            .linea {
+                display: inline-flex;
+            }
+
+            .subcontents {
+                width: 295px;
+                height: 192px;
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+
+            #advertisement {
+                margin-top: 20px;
+                height: 198px;
+            }
+
+            #primeryellow {
+                margin-right: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id="header"></div>
-        <div id="navigation"></div>
-        <div id="main_content">
-            <div class="subcontents"></div>
-            <div class="subcontents"></div>
-            <div class="subcontents"></div>
-            <div id="advertisement"></div>
+    <div id="wrapper"><!-- gris -->
+        <div id="header"></div><!-- morado -->
+        <div id="container"><!-- all together pink + blue -->
+            <div id="navigation"></div><!-- rosado -->
+            <div id="maincontent"><!-- azul -->
+                <div id="container2"><!-- all together yellow -->
+                    <div class="subcontents linea" id="primeryellow"></div><!-- amarillo -->
+                    <div class="subcontents linea"></div>
+                    <div class="subcontents"></div>
+                </div>
+                <div id="advertisement"></div><!-- verde -->
+            </div>
         </div>
     </div>
 </body>
+
 </html>
