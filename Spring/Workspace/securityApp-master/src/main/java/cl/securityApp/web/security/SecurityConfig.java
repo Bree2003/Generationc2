@@ -5,22 +5,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true) //ignora toda la configuración de seguridad que traes, y vamos a usar la que definiremos en esta clase.
-public class SecurityConfig extends WebSecurityConfigurerAdapter { //configurar las rutas que van a quedar libres para los usuarios y las que no.
+public class SecurityConfig{ //configurar las rutas que van a quedar libres para los usuarios y las que no.
 	
 	
 	@Autowired
@@ -33,6 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //configurar 
 	@Autowired
 	private JwtFilter jwtFilter;
 	
+	/*
 	 @Override
 	    protected void configure(HttpSecurity httpSecurity) throws Exception {
 	        httpSecurity.csrf().disable()
@@ -41,12 +43,36 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //configurar 
 	                        exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement() //MANEJO DE EXCEPCIONES.
 	                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	        httpSecurity.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-	    }
+	    }*/
+	 @Bean
+	  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	    http.cors().and().csrf().disable()
+	        .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()
+	        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+	        .authorizeRequests().antMatchers(HttpMethod.POST,"/auth/*").permitAll()
+	        .anyRequest().authenticated();
+	    
+	   // http.authenticationProvider(authenticationProvider());
 
-	    @Override
+	    http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+	    
+	    return http.build();
+	  }
+
+	   /* @Override
 	    public void configure(AuthenticationManagerBuilder auth) throws Exception {
 	        auth.userDetailsService(jwtUserDetailsService).passwordEncoder(passwordEncoder());
-	    }
+	    }*/
+	 
+	 @Bean
+	  public DaoAuthenticationProvider authenticationProvider() {
+	      DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+	       
+	      authProvider.setUserDetailsService(jwtUserDetailsService);
+	      authProvider.setPasswordEncoder(passwordEncoder());
+	   
+	      return authProvider;
+	  }
 
 	    @Bean //traspasamos datos y parámetros de un lado a otro
 	    public PasswordEncoder passwordEncoder() {
@@ -54,10 +80,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //configurar 
 	    }
 
 
-	    @Bean
+	   /* @Bean
 	    @Override
 	    public AuthenticationManager authenticationManagerBean() throws Exception {
 	        return super.authenticationManagerBean();
+	    }*/
+	    
+	    @Bean
+	    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+	      return authConfig.getAuthenticationManager();
 	    }
 
 }
